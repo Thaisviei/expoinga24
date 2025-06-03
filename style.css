@@ -1,0 +1,71 @@
+/* Fonte estilo quadrinhos */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body {
+    font-family: 'Bangers', cursive;
+    background: repeating-radial-gradient(circle at center, #ffeaa7, #fab1a0 10%, #ff7675 20%);
+    background-size: 1000px 1000px;
+    margin: 0;
+    padding: 50px 20px;
+    color: #2d3436;
+    text-align: center;
+    animation: pulseBackground 10s infinite alternate;
+}
+
+/* Animação sutil no fundo */
+@keyframes pulseBackground {
+    0% { background-size: 1000px 1000px; }
+    100% { background-size: 800px 800px; }
+}
+
+#imagemm{
+    padding: 5px;
+}
+
+/* Título com borda de HQ */
+h1 {
+    font-size: 4em;
+    color: #870404;
+    background-color: #f6d1d1;
+    display: inline-block;
+    padding: 20px 40px;
+    border: 5px double #2d3436;
+    box-shadow: 8px 8px 0 #c00909;
+    transform: rotate(-2deg);
+    margin-bottom: 40px;
+}
+
+/* Subtítulo estilo placa de parque */
+h2 {
+    font-size: 2.5em;
+    color: #892203;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 4px dashed #c70202;
+    border-radius: 10px;
+    transform: rotate(2deg);
+    margin-bottom: 25px;
+    box-shadow: 4px 4px 0 #636e72;
+}
+
+/* Parágrafos com contorno de história em quadrinhos */
+p {
+    font-size: 1.4em;
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 4px solid #2d3436;
+    box-shadow: 6px 6px 0 #e17055;
+    border-radius: 15px;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito divertido ao passar o mouse */
+p:hover {
+    transform: scale(1.05) rotate(1deg);
+    background-color: #ffeaa7;
+}
