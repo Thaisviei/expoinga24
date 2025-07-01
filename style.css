@@ -1,71 +1,96 @@
-/* Fonte estilo quadrinhos */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
-body {
-    font-family: 'Bangers', cursive;
-    background: repeating-radial-gradient(circle at center, #ffeaa7, #fab1a0 10%, #ff7675 20%);
-    background-size: 1000px 1000px;
-    margin: 0;
-    padding: 50px 20px;
-    color: #2d3436;
-    text-align: center;
-    animation: pulseBackground 10s infinite alternate;
-}
-
-/* Animação sutil no fundo */
-@keyframes pulseBackground {
-    0% { background-size: 1000px 1000px; }
-    100% { background-size: 800px 800px; }
-}
-
-#imagemm{
-    padding: 5px;
-}
-
-/* Título com borda de HQ */
-h1 {
-    font-size: 4em;
-    color: #870404;
-    background-color: #f6d1d1;
-    display: inline-block;
-    padding: 20px 40px;
-    border: 5px double #2d3436;
-    box-shadow: 8px 8px 0 #c00909;
-    transform: rotate(-2deg);
-    margin-bottom: 40px;
-}
-
-/* Subtítulo estilo placa de parque */
-h2 {
-    font-size: 2.5em;
-    color: #892203;
-    background-color: #ffffff;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 4px dashed #c70202;
-    border-radius: 10px;
-    transform: rotate(2deg);
-    margin-bottom: 25px;
-    box-shadow: 4px 4px 0 #636e72;
-}
-
-/* Parágrafos com contorno de história em quadrinhos */
-p {
-    font-size: 1.4em;
-    background: #fff;
+:root {
+    --bg-color: #fff;
+    --text-color: #222;
+    --link-color: #9a0707;
+    --header-bg: #f9f0f0;
+    --border-color: #9a0707;
+    --font-size-base: 16px;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     padding: 20px;
-    width: 80%;
-    max-width: 700px;
-    margin: 20px auto;
-    border: 4px solid #2d3436;
-    box-shadow: 6px 6px 0 #e17055;
-    border-radius: 15px;
-    transform: rotate(-1deg);
-    transition: transform 0.3s ease;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  header {
+    background-color: var(--header-bg);
+    padding: 1em;
+    border-bottom: 3px solid var(--border-color);
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: var(--link-color);
+  }
+  
+  button#toggle-contrast {
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button#toggle-contrast:focus {
+    outline: 3px solid #333;
+    outline-offset: 3px;
+  }
+  
+  img {
+    border: 5px solid var(--border-color);
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  footer {
+    border-top: 3px solid var(--border-color);
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--link-color);
+  }
+  
+  /* Modo alto contraste */
+  body.high-contrast {
+    --bg-color: #000;
+    --text-color: #fff;
+    --link-color: #0ff;
+    --header-bg: #111;
+    --border-color: #0ff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  /* Botão de voltar ao topo */
+#topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff6f91;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 999;
 }
 
-/* Efeito divertido ao passar o mouse */
-p:hover {
-    transform: scale(1.05) rotate(1deg);
-    background-color: #ffeaa7;
+#topo:hover {
+  background-color: #ff4b91;
+  transform: scale(1.1);
 }
